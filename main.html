@@ -2,6 +2,7 @@
 
 <html lang="en">
   <head>
+      <script src="https://code.jquery.com/jquery-latest.js"></script>
     <title>Anekto</title>
     <style>
 
@@ -21,6 +22,7 @@
      .evenDiv {
         background-color: #1A1A1A;
        min-height: 100%;
+         z-index: 2;
 
       }
 
@@ -41,6 +43,7 @@
 
         .logo1 {
             background: url("img10.png") no-repeat fixed center;
+
 
         }
 
@@ -106,7 +109,37 @@
         }
 
 
+        .header {
+            width:100%;
+            position:fixed;
+            top:0px;
+            margin:0px auto;
+            z-index: 1;
+            height:50px;
+            color: white;
 
+        }
+
+
+
+
+        .logoLeft {
+            float: left;
+            font-family: Precious;
+            color: white;
+            font-size: 20px;
+            list-style-type: none;
+            z-index: 0;
+
+        }
+
+        .navOptions {
+            float: left;
+            margin-left: 400px;
+            position: absolute;
+            list-style-type: none;
+            margin-top: 0;
+        }
 
 
 
@@ -115,14 +148,35 @@
   </head>
   <body>
 
+
+  <div class="header">
+      <div>
+      <ul>
+          <li class="logoLeft">  Anekto </li>
+
+      </ul>
+      </div>
+      <div>
+          <ul class="navOptions">
+              <!--<li><a href="#About"> About </a></li>-->
+          </ul>
+      </div>
+
+  </div>
+
+
+
       <div class="evenDiv">
         <div class="caption">
             <span id="opacityCheck"> <span id="specialA">A</span>nekto </span>
         </div>
       </div>
 
+
+  <a name="About"></a>
       <div class="logo1">
-        Anekto is a company which is gonna touch the sky soon.
+
+
       </div>
 
     <div class="logo2">
@@ -144,6 +198,28 @@
       <div class="logo5">
 
       </div>
+
+
+
+
+
+
+      <script type="text/javascript">
+          (function($) {
+
+              $(".logoLeft").hide();
+
+              $(document).ready(function(){
+                  $(window).scroll(function(){
+                      if ($(this).scrollTop() > 550) {
+                          $('.logoLeft').fadeIn(50);
+                      } else {
+                          $('.logoLeft').fadeOut(50);
+                      }
+                  });
+              });
+          })(jQuery);
+      </script>
 
 
   </body>
