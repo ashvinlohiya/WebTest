@@ -3,6 +3,7 @@
 <html lang="en">
   <head>
       <script src="https://code.jquery.com/jquery-latest.js"></script>
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <title>Anekto</title>
     <style>
 
@@ -14,7 +15,7 @@
         body, html {
         height: 100%;
         margin: 0;
-        font: 400 15px/1.8 "Lato", sans-serif;
+        font: 400 15px/1.8 "Roboto", sans-serif;
         color: #777;
 
       }
@@ -71,6 +72,8 @@
           width: 100%;
           text-align: center;
           color: #000000;
+
+
       }
 
       .caption span.border {
@@ -79,6 +82,8 @@
           padding: 18px;
           font-size: 25px;
           letter-spacing: 10px;
+
+
       }
 
         #opacityCheck {
@@ -90,14 +95,6 @@
 
         }
 
-        .check {
-            background-color: #770D0D;
-            min-height: 100%;
-            opacity: 0.7;
-
-
-
-        }
 
         #specialA {
             animation: change 3s both;
@@ -117,6 +114,9 @@
             z-index: 1;
             height:50px;
             color: white;
+            background-color: #822323;
+
+        ;
 
         }
 
@@ -130,6 +130,7 @@
             font-size: 20px;
             list-style-type: none;
             z-index: 0;
+            margin-top: 0;
 
         }
 
@@ -140,6 +141,32 @@
             list-style-type: none;
             margin-top: 0;
         }
+
+        a:link, a:visited {
+            cursor: auto;
+            text-decoration: none;
+            color: white;
+        }
+
+
+        a:link:active, a:visited:active {
+            color: white;
+        }
+
+        a:link:active {
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        .txt1 {
+            padding-top: 10%;
+            position: relative;
+
+        }
+
 
 
 
@@ -158,7 +185,7 @@
       </div>
       <div>
           <ul class="navOptions">
-              <!--<li><a href="#About"> About </a></li>-->
+              <li><a href="#About"> About </a></li>
           </ul>
       </div>
 
@@ -176,10 +203,19 @@
   <a name="About"></a>
       <div class="logo1">
 
+              <div>
 
-      </div>
+                  In Latin, 'annecto' means to connect <br><br>
+                  That is what we specialize in <br><br>
+                  searching and connecting the right resource with the right company<br><br>
 
-    <div class="logo2">
+              </div>
+          
+          </div>
+
+
+
+    <div class="logo4">
         <div class="caption">
             <span class="border opacityCheck">This is text </span>
         </div>
@@ -191,7 +227,7 @@
 
     </div>
 
-    <div class="logo4">
+    <div class="logo2">
 
     </div>
 
@@ -207,14 +243,13 @@
       <script type="text/javascript">
           (function($) {
 
-              $(".logoLeft").hide();
-
+              $(".logoLeft, .header").hide();
               $(document).ready(function(){
                   $(window).scroll(function(){
                       if ($(this).scrollTop() > 550) {
-                          $('.logoLeft').fadeIn(50);
+                          $('.logoLeft, .header').fadeIn(50);
                       } else {
-                          $('.logoLeft').fadeOut(50);
+                          $('.logoLeft, .header').fadeOut(50);
                       }
                   });
               });
